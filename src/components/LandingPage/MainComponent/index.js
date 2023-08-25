@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Button from "../../Common/Button";
 import "./styles.css";
 import gradient from "../../../assets/gradient.png";
@@ -13,15 +13,15 @@ import {useAuthState} from 'react-firebase-hooks/auth';
 
 function LandingPageComponent() {
   const [user, loading]=useAuthState(auth);
-  const [isModalOpen, setIsModalOpen]= useState(false);
+  // const [isModalOpen, setIsModalOpen]= useState(false);
 
-  const openModal=()=>{
-    setIsModalOpen(true);
-  }
+  // const openModal=()=>{
+  //   setIsModalOpen(true);
+  // }
 
-  const closeModal=()=>{
-    setIsModalOpen(false);
-  };
+  // const closeModal=()=>{
+  //   setIsModalOpen(false);
+  // };
   return (
     <div className="landing-wrapper">
       <div className="landing-left">
@@ -64,12 +64,7 @@ function LandingPageComponent() {
               <Button text='Dashboard' />
                 </Link>
   ) : (
-    <>
-            <Button text="Get Started" onClick={openModal} />
-
-            {/* BasicModal */}
-            {isModalOpen && <BasicModal onClose={closeModal} />}
-          </>
+    <BasicModal/>
   )}
 
 

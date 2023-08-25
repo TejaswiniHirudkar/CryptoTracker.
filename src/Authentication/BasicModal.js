@@ -51,7 +51,7 @@ export default function BasicModal() {
 
   return (
     <div>
-      <div className='outlined-btn' onClick={() => setOpen(true)}>{isLogin ? 'Login' : 'Signup'}</div>
+      <div className='btn-outlined' onClick={() => setOpen(true)}>{isLogin ? 'Login' : 'Signup'}</div>
       <Modal open={open} onClose={() => setOpen(false)}>
         <Box sx={style}>
           <h2 style={{ textAlign: "center",color:"black" }}>{isLogin ? 'Login' : 'Signup'}</h2>
